@@ -20,3 +20,19 @@ menuToggle.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
 });
 
+window.onscroll = function () {
+    var scrollToTopButton = document.getElementById("scrollToTop");
+    if (window.scrollY > 50) {
+        scrollToTopButton.classList.remove("hidden");
+    } else {
+        scrollToTopButton.classList.add("hidden");
+    }
+};
+
+
+document.getElementById("scrollToTop").addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
